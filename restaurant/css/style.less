@@ -1,0 +1,441 @@
+.yes_reg {
+	font-family: 'Yeseva One', cursive;
+	font-weight: 400;
+}
+.gen_reg {
+	font-family: 'Gentium Book Basic', serif;
+	font-weight: 400;
+}
+.gen_bold {
+	font-family: 'Gentium Book Basic', serif;
+	font-weight: 700;
+}
+.lat_reg {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+.open_reg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+.open_bold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+/* Base color panel */
+
+@white: #fff;
+@bora: #c89f2d;
+@borange: #cc9900;
+@bblack: #575858;
+@bwhite: #eee;
+@bsocial: #dab33e;
+@bfooter: #191919;
+
+header {
+	background: url(../img/bg.jpg) no-repeat center;
+	background-size: cover;
+	min-height: 750px;
+}
+
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus,
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+    outline: 0 ;
+    outline-color: transparent ;
+    outline-width: 0 ;
+    outline-style: none ;
+    box-shadow: 0 0 0 0 rgba(0,123,255,0);
+}
+input, button, textarea {
+	&:focus {
+	outline: none;
+  }
+}
+.main {
+	&_head {
+		
+	}
+	&_logo {
+		img {
+			position: relative;
+			margin-top: 10px;
+		}
+		a {
+				position: absolute;
+				.yes_reg;
+				font-size: 36px;
+				text-decoration: none;
+				top: 0;
+				left: 0;
+				margin-top: 20%;
+				margin-left: 16px;
+				color: @bwhite;
+			}
+	}
+	&_nav {
+		ul {
+			padding-top: 30px;
+			li {
+				.gen_bold;
+				font-size: 21px;
+			}
+		}
+		a {
+			color: @bwhite;
+			position: relative;
+		}
+		a::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-top: 2px solid @bwhite;
+    content: '';
+    transform: scaleX(0);
+    opacity: 0;
+    transition: all .3s linear;
+}
+		a:hover::after {
+		    transform: scaleX(1);
+		    opacity: 1;
+}
+	}
+	&_social {
+		&_btn {
+			width: 190px;
+			padding-top: 27px;
+			padding-right: 90px;
+			a {
+				padding-right: 7px;
+				color: @bora;
+				font-size: 18px;
+				&:hover {
+					color: @borange;
+				}
+			}			
+		}
+	}
+}
+
+/* promo block */
+.promo {
+	&_block {
+
+	}
+}
+
+.section_header {
+	h1 {
+			.yes_reg;
+			font-size: 90px;
+			color: @bwhite;
+			margin-top: 10%;
+		}
+}
+.promo {
+	margin-top: 3%;
+		a {
+		.lat_reg;
+		font-size: 18px;
+		color: @bwhite;
+		&:hover {
+			text-decoration: none;
+		}
+		}
+	&_box {
+			width: 230px;
+			height: 60px;
+			background-color: rgba(255,255,255,.3);
+			border: 1px solid darken(@bwhite, 15%);
+			&:hover {
+			background-color: rgba(0,0,0,.6);
+			border: 1px solid @bblack;
+			cursor: pointer;
+		}
+		}
+}
+
+/* section about  */
+
+#about {
+	background-image: url(../img/bg-about.png);
+	background-size: cover;
+	min-height: 710px;
+}
+
+.section_about {
+	margin-top: 13%;
+	h2 {
+		.yes_reg;
+		font-size: 36px;
+		color: @borange;
+	}
+	p {
+		.lat_reg;
+		font-size: 16px;
+		color: @bblack;
+	}
+}
+
+.devider {
+	margin-bottom: 30px;
+}
+
+.cook {
+	margin-left: 85px;
+	margin-top: 20px;
+}
+
+.about_img {
+	margin-top: 6%;
+}
+
+/* section ingredients */
+#ingredients {
+	background-image: url(../img/in-bg.jpg);
+	background-size: cover;
+	min-height: 800px;
+}
+.section_ingredients {
+	margin-top: 12%;
+	width: 570px;
+	height: 560px;
+	position: relative;
+}
+.fine {
+	position: absolute;
+	top: 0;
+	h2 {
+		margin-top: 15%;
+		.yes_reg;
+		font-size: 36px;
+		color: @bwhite;
+	}
+	p{
+		.lat_reg;
+		font-size: 16px;
+		color: @bwhite;
+		padding-top: 15px;
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+}
+
+/* section menu */
+
+#menu {
+	background-image: url(../img/bg-menu.jpg);
+	background-size: cover;
+	min-height: 1000px;
+}
+
+.section_menu {
+	margin-top: 10%;
+	h2 {
+		.yes_reg;
+		font-size: 36px;
+		color: @borange;
+	}
+
+	h3 {
+		.yes_reg;
+		font-size: 20px;
+		color: @borange;
+		margin: 0;
+		text-align: left;
+		padding-left: 70px;
+	}
+	p {
+		padding-left: 70px;
+		text-align: left;
+		.lat_reg;
+		font-size: 16px;
+		color: @bblack;
+	}
+}
+.menu_devider {
+	margin-bottom: 15px;
+}
+.menu_side {
+	margin-top: 15%;
+}
+.price_zatsiki {
+	padding-left: 265px;
+}
+.price {
+	padding-left: 185px;
+}
+.price_olive {
+	padding-left: 222px;
+}
+.price_greek {
+	padding-left: 230px;
+}
+.price_haloumi {
+	padding-left: 260px;
+}
+.price_pie {
+	padding-left: 230px;
+}
+.price_cornish {
+	padding-left: 168px;
+}
+.price_lamb {
+	padding-left: 227px;
+}
+.price_chicken {
+	padding-left: 210px;
+}
+.price_pastitsio {
+	padding-left: 256px;
+}
+
+/* section reviews */ 
+
+#reviews {
+	background-image: url(../img/reviews-bg.jpg);
+	background-size: cover;
+	min-height: 760px;
+}
+.section_reviews {
+	margin-top: 9%;
+	width: 770px;
+	height: 560px;
+	position: relative;
+}
+.rev {
+	position: absolute;
+	top: 0;
+	h2 {
+		margin-top: 15%;
+		.yes_reg;
+		font-size: 36px;
+		color: @bwhite;
+	}
+	p {
+		.yes_reg;
+		font-size: 18px;
+		color: @bwhite;
+		padding-top: 15px;
+		padding-left: 90px;
+		padding-right: 90px;
+	}
+	span {
+		.lat_reg;
+		font-size: 16px;
+	}
+}
+
+/* reservations section */
+
+#reservations {
+	background-image: url(../img/res-bg.jpg);
+	background-size: cover;
+	min-height: 710px;
+}
+
+.devider_reservation {
+	margin-bottom: 10px;
+}
+
+.section_reservations {
+	margin-top: 10%;
+	h2 {
+		.yes_reg;
+		font-size: 36px;
+		color: @borange;
+	}
+	p {
+			.lat_reg;
+			font-size: 16px;
+			color: @bblack;
+		}
+}
+
+.book_btn {
+	.open_reg;
+	font-size: 16px;
+	color: @bwhite;
+	width: 200px;
+	height: 35px;
+	border: none;
+	background: @bora;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(@bora), to(@borange));
+    background: -moz-linear-gradient(@bora, @borange);
+    background: linear-gradient(@bora, @borange);
+    border: solid 1px #a1681b;
+    border-bottom: solid 3px #a1671d;
+    box-shadow: inset 0 0 0 1px #f1bb8f;
+    text-shadow: 0 1px 0 #a1671d;
+	&:hover {
+	background: @borange;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(@borange), to(@bora));
+    background: -moz-linear-gradient(@borange, @bora);
+    background: linear-gradient(@borange, @bora);
+    border: solid 1px #a1681b;
+    border-bottom: solid 3px #a1671d;
+    box-shadow: inset 0 0 0 1px #f1bb8f;
+    cursor: pointer;
+	}
+	&:active {
+    background: @borange;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(@borange), to(@bora));
+    background: -moz-linear-gradient(@borange, @bora);
+    background: linear-gradient(@borange, @bora);
+    border: solid 1px #a1681b;
+    box-shadow: inset 0 10px 15px 0 #a1671d; }
+}
+
+.form_lable {
+	color: @borange;
+}
+
+/* footer section */
+
+#main_footer {
+	background-image: url(../img/footer-bg.jpg);
+	background-size: cover;
+	min-height: 320px;
+}
+
+.footer_section {
+	margin-top: 6%;
+	h3 {
+		.yes_reg;
+		font-size: 21px;
+		color: @bwhite;
+	}
+	p {
+		.open_reg;
+		font-size: 16px;
+		color: @bwhite;
+		margin-top: 5%;
+	}
+	span {
+		.open_bold;
+	}
+	i {
+		color: @bwhite;
+		margin-top: 10%;
+		margin-left: 10px;
+		&:hover {
+			color: @borange;
+		}
+	}
+}
